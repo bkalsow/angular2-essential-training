@@ -1,6 +1,8 @@
 import { Pipe } from '@angular/core';
 
+//defines a custom pipe method
 @Pipe({
+  //defines the pipe name
   name: 'categoryList'
 })
 export class CategoryListPipe {

@@ -1,5 +1,6 @@
 <h2>{{ mediaItem.name }}</h2>
 <ng-template [ngIf]="mediaItem.watchedOn">
+  <! --          value to pass & transform | pipe name: 'params'  -->
   <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </ng-template>
 <div>{{ mediaItem.category }}</div>

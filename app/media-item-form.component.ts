@@ -24,13 +24,14 @@ export class MediaItemFormComponent {
       medium: this.formBuilder.control('Movies'),
       name: this.formBuilder.control('', Validators.compose([
         Validators.required,
-        Validators.pattern('[\\w\\-\\s\\/]+')
+        Validators.pattern('[\\w\\-\\s\\/]+') //defines valid characters for the name field
       ])),
       category: this.formBuilder.control(''),
       year: this.formBuilder.control('', this.yearValidator),
     });
   }
 
+  //defines a custom validator
   yearValidator(control) {
     if (control.value.trim().length === 0) {
       return null;
